@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tanuszodai edzésbeosztás</title>
+
+    <style>
+        body{
+            background-color: blanchedalmond;
+        }
+        table{
+            background-color: white;
+        }
+        tr, table{
+            border-collapse: collapse;
+        }
+        td, th{
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Tanuszodai edzésbeosztás</h1>
+
+    <form id="uszodaForm">
+        <p>
+            Úszó neve:
+            <input type="text" id="nev" required>
+        </p>
+
+        <p>
+            Úszó időpontja:
+            <input type="text" id="idopont" placeholder="12:00-14:00" required>
+        </p>
+
+        <p>
+            Kor:
+            <input type="number" id="kor" min="1" required>
+        </p>
+
+        <p>
+            Uszoda:
+            <input type="text" id="uszoda" required>
+        </p>
+
+        <p>
+            Intenzitás:
+            <input type="text" id="intenzitas" required>
+        </p>
+
+        <button type="submit" id="mentesGomb">Hozzáadás</button>
+    </form>
+
+    <h2>Felvitt úszók</h2>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Név</th>
+                <th>Időpont</th>
+                <th>Kor</th>
+                <th>Uszoda</th>
+                <th>Intenzitás</th>
+                <th>Művelet</th>
+            </tr>
+        </thead>
+
+        <tbody id="uszokTabla">
+        </tbody>
+    </table>
+
+    <script src="./pro.js"></script>
+
+</body>
+</html>
